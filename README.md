@@ -8,6 +8,10 @@ ManyButtons
 A small class that can handle multiple buttons: just one single class and one single instance.
 The result is a low memory usage.
 Handles debouncing and the following events: button press, button release, button long-press.
+Each pin must be reserved for a single button.
+You just need to connect each button to the relevant pin and ground.
+Pull-up resistor is provided by the micro.
+No interrupts are being used, you need to call the Check() method in the Arduino loop().
 Code is Arduino-portable so should work in any Arduino compatible platform.
 Tested on Arduino Uno.
 
