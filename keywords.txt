@@ -1,0 +1,22 @@
+#######################################
+# Data types (KEYWORD1)
+#######################################
+ManyButtons  KEYWORD1
+buttonStatus KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+Init             KEYWORD2
+Clear            KEYWORD2
+Check            KEYWORD2
+getButtonEvent   KEYWORD2
+getPressedButton KEYWORD2
+
+#######################################
+# Literals (LITERAL1)
+#######################################
+mbEVENT_NO_EVENT  LITERAL1
+mbEVENT_PRESS     LITERAL1
+mbEVENT_RELEASE   LITERAL1
+mbEVENT_LONGPRESS LITERAL1
