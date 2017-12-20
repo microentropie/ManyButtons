@@ -7,7 +7,7 @@ See readme.md file in library for details.
 
 /*
 EXAMPLE 2:
-Let's imagne we have a volume control.
+Let's imagine we have a volume control.
 With the action of 2 buttons we will set the volume.
 Code implements three different behaviours:
 * when the relevant button is pressed volume is incremented / decremented
