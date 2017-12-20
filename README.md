@@ -1,4 +1,5 @@
-#ManyButtons
+ManyButtons
+===========
 
 * Author: Stefano Di Paolo (<http://github.com/microentropie>)
 * Copyright (C) 2017 Stefano Di Paolo.
