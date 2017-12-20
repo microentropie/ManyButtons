@@ -24,12 +24,12 @@ open the Arduino IDE and choose Sketch -> Include Library -> Add .ZIP Library...
 Code Examples
 -------------
 Library contains 3 examples:
-* [EXAMPLE 1](https://github.com/microentropie/ManyButtons/examples/ManyButtons_Example1/ManyButtons_Example1.ino):
+* [EXAMPLE 1](./examples/ManyButtons_Example1/ManyButtons_Example1.ino):
   Report (to Serial) when a button is pressed.
-* [EXAMPLE 1n](https://github.com/microentropie/ManyButtons/examples/ManyButtons_Example1n/ManyButtons_Example1n.ino):
+* [EXAMPLE 1n](./examples/ManyButtons_Example1n/ManyButtons_Example1n.ino):
   Report (to Serial) when a button is pressed.
   A notification function is used to get button events. 
-* [EXAMPLE 2](https://github.com/microentropie/ManyButtons/examples/ManyButtons_Example2/ManyButtons_Example2.ino):
+* [EXAMPLE 2](./examples/ManyButtons_Example2/ManyButtons_Example2.ino):
   Let's imagine we have a volume control.
   With the action on 2 buttons we will set the volume.
   Code implements three different behaviours:
