@@ -1,14 +1,8 @@
 // Required Library: https://github.com/microentropie/ManyButtons
 
 /*
-ManyButtons:
-Can handle many buttons with one simple class.
-You need to define the Arduino pins involved in DigitalPin[] array (see below in the example).
-Each pin must be reserved for a single button.
-You just need to connect each button to the relevant pin and ground.
-Pull-up resistor is provided by the micro.
-Class will handle debounce and detect when each button is pressed, released or long-pressed.
-No interrupts are being used, you need to call the Check() method in the Arduino loop().
+Here an example for ManyButtons Arduino library.
+See readme.md file in library for details.
 */
 
 /*
