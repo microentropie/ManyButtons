@@ -43,25 +43,45 @@ Library contains 3 examples:
 
 Documentation
 -------------
-**ManyButtons_PinsAre()**
+**ManyButtons_PinsAre(...);**
 defines the Arduino Pins where buttons are connected to.
 Each button must be connected to the pin and ground, no resistor is required.
-Arduino pin numbers must be specified; example:
-`ManyButtons_PinsAre(11,3);`
-Can use defines, cannot use variables.
+Arduino pin numbers must be specified.
+Must be written out of any function, this is a global resource.
+Example:
+```C++
+ManyButtons_PinsAre(11,3);
+```
+Can use numbers, cannot use variables.
 NOTE: class is static, no need to instantiate it, but `ManyButtons_PinsAre()` with at least one pin defined is required.
 
-**`void Init()`**
+
+**`void Init(byte checkEvents = mbEVENT_RELEASE, int debounceTime = mbDefaultDebounceTime, int longPressTime = mbDefaultLongPressTime);`**
 define basic parameters: events to which subscribe, debounce time, long-press time.
+Example:
+```C++
+ManyButtons::Init();
+```
+
 
 **`void Clear()`**
 reset all events.
+Example:
+```C++
+ManyButtons::Clear();
+```
 
-**`void Check()`**
+
+**`void Check();`**
 need to call this method as frequently as possible.
 this is required to solve all the debounce and event decoding of buttons
+Example:
+```C++
+ManyButtons::Check();
+```
 
-**`buttonStatus getButtonEvent()`**
+
+**`buttonStatus getButtonEvent();`**
 returns pin number and event of the pressed button.
 If no event has occurred
   returns event = mbEVENT_NO_EVENT
@@ -72,18 +92,38 @@ NOTE: the button status can only be read once;
       If more buttons or more events on the same button occurs
       between 2 calls of this method, they are lost.
       Use ReportEventFn() if you want to catch them all.
+Example:
+```C++
+buttonStatus b = ManyButtons::getButtonEvent();
+if(b.event != mbEVENT_NO_EVENT)
+{
+  // handle event here
+}
+```
+
 
 **`byte getPressedButton()`**
 returns 0 if no button is being held pressed now.
 returns the pin number if a button is currently being pressed.
 NOTE: useful for auto increase/decrease of variables (see example 3).
-This method return if a button is pressed, regardless of the subscribed events.
+This method returns if a button (and which one) is pressed, regardless of the subscribed events.
+Example:
+```C++
+byte pin = ManyButtons::getPressedButton();
+if(pin > 0)
+{
+  // handle button here
+}
+```
 
-**`ReportEventFn`**
+**`void(*ReportEventFn)(byte event, int pin, unsigned long timestamp);`**
 Callback function that, if defined, will be called whenever any event occurs.
 See 'ManyButtons_Example1n' for an example.
 
 
 License
 -------
-License: [MIT](https://en.wikipedia.org/wiki/MIT_License)
+Copyright (c) 2017 by Stefano Di Paolo
+The MIT License (MIT).
+A copy of the license is enclosed (see license file), or you can read it here:
+<https://en.wikipedia.org/wiki/MIT_License>
