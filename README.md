@@ -22,7 +22,8 @@ Requirements
 
 Installation
 ------------
-Download the ZIP archive (<https://github.com/microentropie/ManyButtons> Press "Clone or download", then "Download ZIP"),
+Download the ZIP archive (<https://github.com/microentropie/Arduino-Libraries/ManyButtons.zip>
+Press "Clone or download", then "Download ZIP"),
 open the Arduino IDE and choose Sketch -> Include Library -> Add .ZIP Library... and select the downloaded file.
 
 Code Examples
